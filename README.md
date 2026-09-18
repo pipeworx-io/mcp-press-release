@@ -77,3 +77,13 @@ The gateway picks the right tool and fills the arguments automatically.
 ## License
 
 MIT
+
+## No MCP client? Call it over HTTP
+
+```bash
+curl -X POST https://gateway.pipeworx.io/v1/tools/press_release_generate \
+  -H 'Content-Type: application/json' \
+  -d '{"announcement":"We are launching a new AI-powered analytics platform that helps businesses make data-driven decisions in real-time.","company":"TechVision Inc.","tone":"disrupting","location":"San Francisco, CA"}'
+```
+
+No account needed for the first calls. Inspect any tool: `GET https://gateway.pipeworx.io/v1/tools/press_release_generate`. Find one: `POST https://gateway.pipeworx.io/v1/tools/search_packs` with `{"query":"..."}`.
