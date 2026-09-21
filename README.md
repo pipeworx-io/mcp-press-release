@@ -1,6 +1,6 @@
 # mcp-press-release
 
-press-release MCP — wraps StupidAPIs (requires X-API-Key)
+Satirical press-release generator (StupidAPIs) — output is fabricated parody for entertainment, never a real company announcement. Keyless. Renamed on the gateway to `satire-press-release` / `satirical_release_generate` on 2026-09-21; the URL below still resolves to it.
 
 Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1476+ live data sources.
 

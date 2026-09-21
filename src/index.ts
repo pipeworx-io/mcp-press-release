@@ -14,13 +14,18 @@ interface McpToolExport {
 }
 
 /**
- * press-release MCP — wraps StupidAPIs (requires X-API-Key)
+ * press-release MCP — wraps StupidAPIs' satirical press-release generator.
  *
- * Transform any announcement into a press release of considerable importance. No a
+ * Output is FABRICATED parody for entertainment; nothing here is a real company
+ * announcement. Keyless: the endpoint answers a bare request (verified
+ * 2026-09-21, HTTP 200 with no X-API-Key), so the credential that used to sit
+ * in this file was removed. Note the pack was renamed on the gateway to
+ * `satire-press-release` (tool `satirical_release_generate`); the old remote URL
+ * below still resolves to it.
  */
 
 
-const API_KEY = '6e0ddbe88486dc354370290979829dc892b0386bd789ae5a';
+const HEADERS = { 'User-Agent': 'pipeworx-satire-press-release/1.0 (+https://pipeworx.io)' };
 
 const tools: McpToolExport['tools'] = [
   {
@@ -43,7 +48,7 @@ async function callApi(url: string, args: Record<string, unknown>): Promise<unkn
   }
   const fullUrl = params.toString() ? url + '?' + params.toString() : url;
   const res = await fetch(fullUrl, {
-    headers: { 'X-API-Key': API_KEY },
+    headers: HEADERS,
   });
   if (!res.ok) throw new Error('press-release API error: ' + res.status);
   return res.json();

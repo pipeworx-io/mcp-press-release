@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-press-release",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "press-release MCP — wraps StupidAPIs (requires X-API-Key)",
   "type": "module",
   "main": "src/index.ts",
