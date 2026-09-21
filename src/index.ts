@@ -20,12 +20,12 @@ interface McpToolExport {
  * announcement. Keyless: the endpoint answers a bare request (verified
  * 2026-09-21, HTTP 200 with no X-API-Key), so the credential that used to sit
  * in this file was removed. Note the pack was renamed on the gateway to
- * `satire-press-release` (tool `satirical_release_generate`); the old remote URL
+ * `corporate-satire` (tool `corporate_satire_generate`); the old remote URL
  * below still resolves to it.
  */
 
 
-const HEADERS = { 'User-Agent': 'pipeworx-satire-press-release/1.0 (+https://pipeworx.io)' };
+const HEADERS = { 'User-Agent': 'pipeworx-corporate-satire/1.0 (+https://pipeworx.io)' };
 
 const tools: McpToolExport['tools'] = [
   {
